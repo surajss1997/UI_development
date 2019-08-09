@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animation</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <style>
+        body{
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        .fa-user-circle{
+            color: white;
+            font-size: 20px;
+        }
+        #simple{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            box-shadow: 0 0 5px black;
+            border-radius: 50%;
+            border: 20px solid limegreen;
+            text-align: center;
+            line-height: 100px;
+            animation: simple 2s infinite linear 0s;
+        }
+        @keyframes simple {
+            0% , 50%, 100%{
+                background-color: lightgreen;
+                border-color: limegreen;
+            }
+            25% , 75%{
+                background-color: limegreen;
+                border-color: lightgreen;
+            }
+        }
+
+        #spin{
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 5px black;
+            border-radius: 50%;
+            border: 20px solid lightgreen;
+            border-top: 20px solid limegreen;
+            border-bottom: 20px solid limegreen;
+            text-align: center;
+            line-height: 100px;
+            background: linear-gradient(45deg,lightgreen,limegreen);
+            animation: spin 2s infinite linear 0s;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        #news{
+            background-color: lightgreen;
+            font-size: 25px;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            border: 15px solid limegreen;
+            box-shadow: 0 0 10px black;
+            overflow: hidden;
+        }
+        #news p{
+            margin: 0;
+            animation:  news 10s infinite linear 0s;
+        }
+        @keyframes news {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+
+        #box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 200px;
+            background-color: limegreen;
+            box-shadow: 0 0 5px black;
+            position: relative; /* mandatory */
+            animation:  box 4s infinite linear 0s;
+        }
+        @keyframes box {
+            0%{
+                top: 0;
+                left: 0;
+                transform: rotate(0deg);
+                border-radius: 0;
+            }
+            25%{
+                top: 0;
+                left: 200px;
+                transform: rotate(90deg);
+                border-radius: 50%;
+            }
+            50%{
+                top: 200px;
+                left: 200px;
+                transform: rotate(180deg);
+                border-radius: 0;
+            }
+            75%{
+                top: 200px;
+                left: 0;
+                transform: rotate(270deg);
+                border-radius: 50%;
+            }
+            100%{
+                top: 0;
+                left: 0;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Simple Animation</h3>
+    <div id="simple">
+        <i class="fa fa-user-circle"></i>
+    </div>
+
+    <hr>
+
+    <h3>Spin Animation</h3>
+    <div id="spin">
+        <i class="fa fa-user-circle"></i>
+    </div>
+
+    <hr>
+
+    <h3>News Animation</h3>
+    <div id="news">
+        <p>Latest News: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, voluptatibus?</p>
+    </div>
+
+    <hr>
+
+    <!-- Box Animation -->
+    <h3>Box Animation</h3>
+    <div id="box"></div>
+
+    <hr>
+
+    <!-- Foot Ball Animation -->
+    <h3>Foot Ball Animation</h3>
+    <div id="football"></div>
+    <hr>
+
+</body>
+</html>

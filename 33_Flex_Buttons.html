@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.8.1.css">
+    <title>CSS Flex Buttons</title>
+    <style>
+        .container{
+            background-color: lightsalmon;
+            padding: 10px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            color: white;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            background: linear-gradient(45deg,black,red);
+        }
+        .box2{
+            background: linear-gradient(45deg,black,yellow);
+        }
+        .box3{
+            background: linear-gradient(45deg,black,purple);
+        }
+        .box4{
+            background: linear-gradient(45deg,black,limegreen);
+        }
+        @media (max-width: 700px) {
+            .container{
+                flex-direction: column;
+                height: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box box1">
+            <i class="fa fa-paper-plane fa-3x"></i>
+        </div>
+
+        <div class="box box2">
+            <i class="fa fa-snowflake fa-3x"></i>
+        </div>
+
+        <div class="box box3">
+            <i class="fa fa-user-circle fa-3x"></i>
+        </div>
+
+        <div class="box box4">
+            <i class="fa fa-graduation-cap fa-3x"></i>
+        </div>
+    </div>
+
+<!--
+
+ Future Practice of CSS
+----------------------
+1) Class room notes
+2) Free Code Camp Certifications 5 Project
+3) https://themefisher.com
+4) https://themewagon.com
+5) https://html5up.net/
+6) https://templated.co
+
+ -->
+
+</body>
+</html>

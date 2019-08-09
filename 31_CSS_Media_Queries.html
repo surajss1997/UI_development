@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Media Queries</title>
+    <style>
+        h1{
+            font-family: "Comic Sans MS",sans-serif;
+            text-align: center;
+            color: white;
+        }
+        h2{
+            font-family: "Comic Sans MS",sans-serif;
+            text-align: center;
+            color: white;
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+
+        /* ---------------- Mobile Screen --------------- */
+        @media (max-width: 500px) {
+            body{
+               background: linear-gradient(45deg,black,limegreen);
+            }
+            div h2:nth-child(1){
+                display: block;
+            }
+            p{
+                color: white;
+                font-family: "Comic Sans MS",sans-serif;
+                font-size: 18px;
+            }
+        }
+
+        /* ---------------- Tablet Screen --------------- */
+        @media (min-width: 501px) and (max-width: 800px) {
+            body{
+                background: linear-gradient(45deg,black,purple);
+            }
+            div h2:nth-child(2){
+                display: block;
+            }
+            p{
+                color: white;
+                font-family: Arial,sans-serif;
+                font-size: 22px;
+            }
+        }
+
+        /* ---------------- Laptop & Desktop Screen --------------- */
+        @media (min-width: 801px) and (max-width: 1200px) {
+            body{
+                background: linear-gradient(45deg,black,orange);
+            }
+            div h2:nth-child(3){
+                display: block;
+            }
+            p{
+                color: white;
+                font-family: Castellar,sans-serif;
+                font-size: 25px;
+            }
+        }
+
+        /* ---------------- X-Large Screen --------------- */
+        @media (min-width: 1201px){
+            body{
+                background: linear-gradient(45deg,black,blue);
+            }
+            div h2:nth-child(4){
+                display: block;
+            }
+            p{
+                color: white;
+                font-family: "Lucida Calligraphy",sans-serif;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Screen Size : <span></span></h1>
+    <div>
+        <h2>Mobile Screen</h2>
+        <h2>Tablet Screen</h2>
+        <h2>Laptop / Desktop Screen</h2>
+        <h2>X-Large Screen</h2>
+        <img src="img/image4.jpeg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci architecto aut culpa cupiditate deleniti dolore earum eligendi facere facilis hic in iure iusto laborum magnam modi molestiae molestias mollitia, nam nemo nostrum nulla officiis praesentium qui quia quibusdam reiciendis sapiente sint tempore vel veritatis vero vitae voluptatum! Incidunt, quaerat?</p>
+    </div>
+
+
+<script>
+    window.addEventListener('resize',function() {
+        let screenSize = window.innerWidth;
+        document.querySelector('span').innerText = `${screenSize} px`;
+    });
+</script>
+</body>
+</html>

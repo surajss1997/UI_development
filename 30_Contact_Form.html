@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Contact Form</title>
+    <style>
+        .contact-div{
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg,black,blueviolet);
+            color: white;
+            margin: auto;
+        }
+        .contact-div h2{
+            text-align: center;
+            font-size: 30px;
+        }
+        .contact-form label{
+            display: block;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        .form-field{
+            font-size: 20px;
+            height: 40px;
+            border: none;
+            outline: none;
+            width: 290px;
+            margin: 10px 0 10px 0;
+            border-radius: 5px;
+        }
+        .contact-form textarea{
+            border: none;
+            outline: none;
+            width: 285px;
+            margin: 10px 0 10px 0;
+            border-radius: 5px;
+        }
+        #contact-btn{
+            background: linear-gradient(45deg,darkslategray,blueviolet);
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            padding: 10px 25px;
+            width: 290px;
+            border-radius: 5px;
+        }
+        #contact-btn:hover{
+            box-shadow: 0 0 5px lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-div">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label>NAME</label>
+                <input type="text" class="form-field">
+            </div>
+            <div class="form-group">
+                <label>EMAIL</label>
+                <input type="email" class="form-field">
+            </div>
+            <div class="form-group">
+                <label>SUBJECT</label>
+                <select class="form-field">
+                    <option>Select Subject</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea rows="5" cols="20"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Contact" id="contact-btn">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

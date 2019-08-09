@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        form{
+            background: linear-gradient(45deg,lightgreen,coral,lightgreen);
+            text-align: center;
+            padding: 20px;
+        }
+        #email{
+            font-size: 30px;
+            height: 50px;
+            border: none;
+            outline: none;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            background-color: lightgoldenrodyellow;
+            box-shadow: 0 0 10px darkslategray;
+        }
+        #email:focus{
+            box-shadow: 0 0 15px darkred;
+        }
+        #btn{
+            background: linear-gradient(45deg,coral,lightgreen);
+            border: none;
+            font-size: 30px;
+            padding: 11px 25px;
+            box-shadow: 0 0 5px darkslategray;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-left: -10px;
+        }
+        #btn:hover{
+            box-shadow: 0 0 15px darkred;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <input type="email" placeholder="Your Email Here" id="email">
+        <input type="submit" value="Subscribe" id="btn">
+    </form>
+
+</body>
+</html>
